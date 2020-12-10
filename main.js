@@ -19,9 +19,9 @@ const userInputNumber = (n) => {
       numArr.push(i);
     }
   }
-  console.log(multiplyPrimeArr(numArr))
+  console.log(multiplyPrimeArr(numArr));
   return multiplyPrimeArr(numArr);
 };
-userInputNumber(3)
+userInputNumber(3);
 
 module.exports = userInputNumber;
