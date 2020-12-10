@@ -1,3 +1,4 @@
+const isPrime = require("./helpers/primeNumbers");
 
 const userInputNumber = (n) => {
   if (typeof n !== "number") {
@@ -6,17 +7,19 @@ const userInputNumber = (n) => {
   if (n % 1 !== 0) {
     return "Whole number is required";
   }
-  if (n < 1 || 0){
-      return "A minimum value of 1 is required"
+  if (n < 1 || 0) {
+    return "A minimum value of 1 is required";
   }
 
-  let numArr = [0];
+  let numArr = [];
 
-  for (i = 1; i <= n; i++ ) {
-      numArr.push(i)
+  for (i = 1; n > numArr.length; i++) {
+    if (isPrime(i)) {
+      numArr.push(i);
+    }
   }
   return numArr;
+  
 };
-
 
 module.exports = userInputNumber;
