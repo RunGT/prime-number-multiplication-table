@@ -1,4 +1,5 @@
 const isPrime = require("./helpers/primeNumbers");
+const multiplyPrimeArr = require("./helpers/primeNumberMultiplication");
 
 const userInputNumber = (n) => {
   if (typeof n !== "number") {
@@ -18,8 +19,9 @@ const userInputNumber = (n) => {
       numArr.push(i);
     }
   }
-  return numArr;
-  
+  console.log(multiplyPrimeArr(numArr))
+  return multiplyPrimeArr(numArr);
 };
+userInputNumber(3)
 
 module.exports = userInputNumber;
