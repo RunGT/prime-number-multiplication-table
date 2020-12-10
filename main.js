@@ -1,3 +1,4 @@
+
 const userInputNumber = (n) => {
   if (typeof n !== "number") {
     return "Value entered is not a number";
@@ -8,7 +9,14 @@ const userInputNumber = (n) => {
   if (n < 1 || 0){
       return "A minimum value of 1 is required"
   }
-  return n;
+
+  let numArr = [0];
+
+  for (i = 1; i <= n; i++ ) {
+      numArr.push(i)
+  }
+  return numArr;
 };
+
 
 module.exports = userInputNumber;

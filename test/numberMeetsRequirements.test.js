@@ -3,7 +3,6 @@ const userInputNumber = require("../main");
 
 describe("Check N meets requirements", () => {
     test("N is a number", () => {
-        expect(userInputNumber(3)).toBe(3);
         expect(userInputNumber("Three")).toBe("Value entered is not a number");
     });
 
