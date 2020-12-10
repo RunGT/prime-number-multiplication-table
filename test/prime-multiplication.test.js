@@ -3,10 +3,10 @@
 
 const { test } = require("@jest/globals");
 const { describe } = require("yargs");
-const primeTable = require("../main");
+const userInputNumber = require("../main");
 
-describe("Check if in meets requirements", () => {
+
     test("N is a number", () => {
         expect(userInputNumber(2)).toBe(2);
-    })
-});
+    });
+
