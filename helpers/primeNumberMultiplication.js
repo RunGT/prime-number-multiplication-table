@@ -1,20 +1,17 @@
 module.exports = (numArr) => {
-  if (numArr.length === 0) {
-    return null;
-  }
+  
+  let firstRow = [null, ...numArr];
+  let allRowsColumns = [firstRow];
 
-  let firstMultiples = [null, ...numArr];
-  let allMultiples = [firstMultiples];
+  numArr.map((rowOfPrimes) => {
+    let multiples = [rowOfPrimes];
+    numArr.map((columnOfPrimes) => {
+      let multiplication = rowOfPrimes * columnOfPrimes;
 
-  numArr.forEach((primeRow) => {
-    let multiples = [primeRow];
-    numArr.forEach((primeColumn) => {
-      let multiple = primeRow * primeColumn;
-
-      multiples.push(multiple);
+      multiples.push(multiplication);
     });
-    allMultiples.push(multiples);
+    allRowsColumns.push(multiples);
   });
 
-  return allMultiples;
+  return allRowsColumns;
 };
