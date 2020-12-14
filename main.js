@@ -2,6 +2,7 @@ const isPrime = require("./helpers/primeNumbers");
 const multiplyPrimeArr = require("./helpers/primeNumberMultiplication");
 
 const useInputNumberToCreatePrimeMultiplicationTable = (n) => {
+  
   // Check if n meets all requirements
 
   if (typeof n !== "number") {
@@ -15,6 +16,7 @@ const useInputNumberToCreatePrimeMultiplicationTable = (n) => {
   }
 
   let numArr = [];
+
 // Loop through the array, check if the number is a prime, if it is push i to numArr
   for (i = 1; n > numArr.length; i++) {
     if (isPrime(i)) {
@@ -24,6 +26,9 @@ const useInputNumberToCreatePrimeMultiplicationTable = (n) => {
   
   return multiplyPrimeArr(numArr);
 };
+
+// Insert a number into the function and then run ` node main.js ` to print the table to the console
+
 useInputNumberToCreatePrimeMultiplicationTable(3);
 
 module.exports = useInputNumberToCreatePrimeMultiplicationTable;
