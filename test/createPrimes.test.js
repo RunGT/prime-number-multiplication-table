@@ -1,8 +1,7 @@
 const { test, expect } = require("@jest/globals");
 const userInputNumber = require("../main");
 
-test("Create an array of prime numbers from N", () => {
-  
+test("Create an array length of only prime numbers from N including null", () => {
   expect(userInputNumber(3).length).toBe(4);
 });
 
