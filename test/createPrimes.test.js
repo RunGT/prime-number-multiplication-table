@@ -1,8 +1,8 @@
 const { test, expect } = require("@jest/globals");
-const userInputNumber = require("../main");
+const useInputNumberToCreatePrimeMultiplicationTable = require("../main");
 
 test("Create an array length of only prime numbers from N including null", () => {
-  expect(userInputNumber(3).length).toBe(4);
+  expect(useInputNumberToCreatePrimeMultiplicationTable(3).length).toBe(4);
 });
 
 const expected = [
@@ -12,5 +12,5 @@ const expected = [
   [5, 10, 15, 25],
 ];
 test("Check prime multiplication table is correct", () => {
-  expect(userInputNumber(3)).toStrictEqual(expected);
+  expect(useInputNumberToCreatePrimeMultiplicationTable(3)).toStrictEqual(expected);
 });

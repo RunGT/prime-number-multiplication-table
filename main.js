@@ -1,7 +1,8 @@
 const isPrime = require("./helpers/primeNumbers");
 const multiplyPrimeArr = require("./helpers/primeNumberMultiplication");
 
-const userInputNumber = (n) => {
+// A user
+const useInputNumberToCreatePrimeMultiplicationTable = (n) => {
   if (typeof n !== "number") {
     return "Value entered is not a number";
   }
@@ -22,6 +23,6 @@ const userInputNumber = (n) => {
   console.log(multiplyPrimeArr(numArr));
   return multiplyPrimeArr(numArr);
 };
-userInputNumber(3);
+useInputNumberToCreatePrimeMultiplicationTable(3);
 
-module.exports = userInputNumber;
+module.exports = useInputNumberToCreatePrimeMultiplicationTable;
