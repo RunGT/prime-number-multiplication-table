@@ -1,8 +1,9 @@
 const isPrime = require("./helpers/primeNumbers");
 const multiplyPrimeArr = require("./helpers/primeNumberMultiplication");
 
-// A user
 const useInputNumberToCreatePrimeMultiplicationTable = (n) => {
+  // Check if n meets all requirements
+
   if (typeof n !== "number") {
     return "Value entered is not a number";
   }
@@ -14,13 +15,13 @@ const useInputNumberToCreatePrimeMultiplicationTable = (n) => {
   }
 
   let numArr = [];
-
+// Loop through the array, check if the number is a prime, if it is push i to numArr
   for (i = 1; n > numArr.length; i++) {
     if (isPrime(i)) {
       numArr.push(i);
     }
   }
-  console.log(multiplyPrimeArr(numArr));
+  
   return multiplyPrimeArr(numArr);
 };
 useInputNumberToCreatePrimeMultiplicationTable(3);
