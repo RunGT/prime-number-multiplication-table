@@ -1,6 +1,6 @@
 module.exports = (numArr) => {
   // firstRow is the first row with null and adds the arrary using the spread operator
-  let firstRow = [null, ...numArr];
+  let firstRow = ['x', ...numArr];
   let allRowsColumns = [firstRow];
 
   // Iterate through the array of prime numbers (numArr).

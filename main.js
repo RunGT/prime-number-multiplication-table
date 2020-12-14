@@ -23,7 +23,7 @@ const useInputNumberToCreatePrimeMultiplicationTable = (n) => {
       numArr.push(i);
     }
   }
-  
+  console.log(multiplyPrimeArr(numArr));
   return multiplyPrimeArr(numArr);
 };
 
