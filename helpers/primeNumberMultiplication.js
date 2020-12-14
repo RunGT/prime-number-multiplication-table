@@ -1,19 +1,21 @@
 module.exports = (numArr) => {
-  
   // firstRow is the first row with null and adds the arrary using the spread operator
   let firstRow = [null, ...numArr];
   let allRowsColumns = [firstRow];
 
-  numArr.map((rowOfPrimes) => {
-    let multiples = [rowOfPrimes];
+  // Iterate through the array of prime numbers (numArr).
+  numArr.map((numberInRowOfPrimes) => {
+    let multiplesOfNumbers = [numberInRowOfPrimes];
 
+    // For each interation multiply by each number and push the multiplication result to the multiplesOfNumbers array
 
-    numArr.map((columnOfPrimes) => {
-      let multiplication = rowOfPrimes * columnOfPrimes;
+    numArr.map((numberInColumnOfPrimes) => {
+      let multiplication = numberInRowOfPrimes * numberInColumnOfPrimes;
 
-      multiples.push(multiplication);
+      multiplesOfNumbers.push(multiplication);
     });
-    allRowsColumns.push(multiples);
+
+    allRowsColumns.push(multiplesOfNumbers);
   });
 
   return allRowsColumns;
